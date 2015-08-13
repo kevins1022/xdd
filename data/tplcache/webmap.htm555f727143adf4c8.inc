@@ -1,0 +1,41 @@
+<?php
+$z[0]=Array("global","",233,261);
+$z[0][4]['name']="cfg_soft_lang";
+$z[1]=Array("global","",273,299);
+$z[1][4]['name']="cfg_webname";
+$z[2]=Array("global","",342,372);
+$z[2][4]['name']="cfg_description";
+$z[3]=Array("global","",408,435);
+$z[3][4]['name']="cfg_keywords";
+$z[4]=Array("global","",453,485);
+$z[4][4]['name']="cfg_templets_skin";
+$z[5]=Array("global","",549,581);
+$z[5][4]['name']="cfg_templets_skin";
+$z[6]=Array("global","",645,677);
+$z[6][4]['name']="cfg_templets_skin";
+$z[7]=Array("global","",765,797);
+$z[7][4]['name']="cfg_templets_skin";
+$z[8]=Array("global","",868,900);
+$z[8][4]['name']="cfg_templets_skin";
+$z[9]=Array("include","",948,983);
+$z[9][4]['filename']="head.htm";
+$z[10]=Array("global","",1030,1062);
+$z[10][4]['name']="cfg_templets_skin";
+$z[11]=Array("channel","\n      <li><a href='[field:typeurl/]'>[field:typename/]</a></li>\n      ",1255,1452);
+$z[11][4]['type']="son";
+$z[11][4]['currentstyle']="<li class='on'><a href='~typelink~' >~typename~</a></li>";
+$z[12]=Array("global","",1547,1579);
+$z[12][4]['name']="cfg_templets_skin";
+$z[13]=Array("field","",1799,1821);
+$z[13][4]['name']="typename";
+$z[14]=Array("field","",1866,1895);
+$z[14][4]['name']="position";
+$z[15]=Array("global","",2135,2167);
+$z[15][4]['name']="cfg_templets_skin";
+$z[16]=Array("channelartlist"," \n        <table border=\"0\">\n          <tbody>\n          <tr height=\"38\">\n            <td width=\"70\" class=\"tit\">{dede:field name='typename'/}</td>\n              {dede:channel type='son' noself='yes'} \n            <td width=\"65\"><a href=\"[field:typelink/]\">[field:typename/]</a></td>\n             {/dede:channel} \n            <td>\n              \n            </td>\n          </tr>\n        </tbody>\n        </table>\n     ",2255,2738);
+$z[16][4]['typeid']="top";
+$z[16][4]['row']="7";
+$z[17]=Array("include","",2917,2954);
+$z[17][4]['filename']="footer.htm";
+
+?>

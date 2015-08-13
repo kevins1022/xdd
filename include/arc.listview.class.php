@@ -1109,7 +1109,7 @@ class ListView
         $totalpage = ceil($this->TotalResult/$this->PageSize);
         if($totalpage<=1 && $this->TotalResult>0)
         {
-            return "<li><span class=\"pageinfo\">共 1 页/".$this->TotalResult." 条记录</span></li>\r\n";
+            return "<li style='width:120px' ><span  class=\"pageinfo\">共 1 页/".$this->TotalResult." 条记录</span></li>\r\n";
         }
         if($this->TotalResult == 0)
         {
@@ -1136,21 +1136,21 @@ class ListView
         //获得上一页和下一页的链接
         if($this->PageNo != 1)
         {
-            $prepage.="<li><a href='".$purl."PageNo=$prepagenum'>上一页</a></li>\r\n";
-            $indexpage="<li><a href='".$purl."PageNo=1'>首页</a></li>\r\n";
+            $prepage.="<li class=\"pgNext\"><a href='".$purl."PageNo=$prepagenum'>上一页</a></li>\r\n";
+            $indexpage="<li class=\"pgNext\"><a href='".$purl."PageNo=1'>首页</a></li>\r\n";
         }
         else
         {
-            $indexpage="<li><a>首页</a></li>\r\n";
+            $indexpage="<li class=\"pgNext\"><a>首页</a></li>\r\n";
         }
         if($this->PageNo!=$totalpage && $totalpage>1)
         {
-            $nextpage.="<li><a href='".$purl."PageNo=$nextpagenum'>下一页</a></li>\r\n";
-            $endpage="<li><a href='".$purl."PageNo=$totalpage'>末页</a></li>\r\n";
+            $nextpage.="<li class=\"pgNext\" ><a href='".$purl."PageNo=$nextpagenum'>下一页</a></li>\r\n";
+            $endpage="<li class=\"pgNext\" ><a href='".$purl."PageNo=$totalpage'>末页</a></li>\r\n";
         }
         else
         {
-            $endpage="<li><a>末页</a></li>\r\n";
+            $endpage="<li class=\"pgNext\" ><a>末页</a></li>\r\n";
         }
 
 
@@ -1178,11 +1178,11 @@ class ListView
         {
             if($j==$this->PageNo)
             {
-                $listdd.= "<li class=\"thisclass\"><a>$j</a></li>\r\n";
+                $listdd.= "<li class=\"page-number pgCurrent\"><a>$j</a></li>\r\n";
             }
             else
             {
-                $listdd.="<li><a href='".$purl."PageNo=$j'>".$j."</a></li>\r\n";
+                $listdd.="<li class=\"page-number\"><a  href='".$purl."PageNo=$j'>".$j."</a></li>\r\n";
             }
         }
 

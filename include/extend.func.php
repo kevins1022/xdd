@@ -19,3 +19,36 @@ function litimgurls($imgid=0)
     //返回结果
     return $lit_imglist;
 }
+function GetOneImgUrl($img,$ftype=1){ 
+
+        if($img <> ''){  
+        $dtp = new DedeTagParse();  
+        //var_dump($img);
+        $dtp->LoadSource($img); 
+        var_dump($img); 
+        if(is_array($dtp->CTags)){  
+        foreach($dtp->CTags as $ctag){  
+            var_dump($ctag->GetName());
+        if($ctag->GetName()=='img'){  
+        $width = $ctag->GetAtt('width');  
+        $height = $ctag->GetAtt('height');  
+        $imgurl = trim($ctag->GetInnerText());  
+        $img = ''; 
+        var_dump($imgurl); 
+        if($imgurl != ''){  
+            if(1==1){  
+            $img .= $imgurl;  
+            var_dump($img);
+            } else{
+                $img .= '<img src="'.$imgurl.'" width="'.$width.'" height="'.$height.'" />';  
+            } 
+
+        }  
+         
+        }  
+        }  
+        }  
+        $dtp->Clear();  
+        return $img;  
+        }  
+}

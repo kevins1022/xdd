@@ -147,7 +147,7 @@ class TypeLink
                     $this->LogicGetPosition($this->TypeInfos['reid'],true);
                 }
                 $this->valuePosition = $indexpage.$this->SplitSymbol.$this->valuePosition;
-                return $this->valuePosition.$this->SplitSymbol;
+                return $this->valuePosition;
             }
             else
             {
@@ -196,7 +196,7 @@ class TypeLink
     function GetOneTypeLink($typeinfos)
     {
         $typepage = $this->GetOneTypeUrl($typeinfos);
-        $typelink = "<a href='".$typepage."'>".$typeinfos['typename']."</a>";
+        $typelink = "<a href='".$typepage."'><span class='link'>".$typeinfos['typename']."</span></a>";
         return $typelink;
     }
 

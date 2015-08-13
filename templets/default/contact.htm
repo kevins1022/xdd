@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+
+<link href="{dede:global.cfg_templets_skin/}/css/style.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/pager.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.pager.js" ></script>
+</head>
+
+<body>
+{dede:include filename="head.htm"/}
+<div class="main" style="background-image:url({dede:global.cfg_templets_skin/}/images/nei_top1.jpg)">
+  <div class="nei_left">
+    <div class="left_nav">
+      <div class="tit">
+       <p>Contact</p>
+        <p><span>联系合作</span></p>
+      </div>
+      <ul>
+      {dede:channel type='son' currentstyle="
+      <li class='on'><a href='~typelink~' >~typename~</a></li>
+      "}
+      <li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+      {/dede:channel}
+
+   
+      </ul>
+    </div><!--left_nav end-->
+    <div class="left_contact">
+      <img src="{dede:global.cfg_templets_skin/}/images/nei_tel.jpg" />
+      <p><span>营业时间 : </span>AM 09:00 ~ PM 11:00</p>
+    </div><!--left_contact end-->
+  </div><!--nei_left end-->
+  <div class="nei_right">
+    <div class="title">
+      <div class="tit">{dede:field.typename/}</div>
+      <div class="position">
+        <!-- <a href="index.html">首页</a>&nbsp;>&nbsp;<a href="about.html">走进鲜多多</a>&nbsp;>&nbsp;<a href="about.html"><span>关于鲜多多</span></a> -->
+        {dede:field name='position'/}
+      <script>
+        $(function(){
+          $(".link:eq(0)").css('color','#969595');
+        });
+      </script>
+      </div><!--position end-->
+      <div class="clear"></div>
+    </div><!--title end-->
+    <div class="line"><img src="{dede:global.cfg_templets_skin/}/images/line.jpg" /></div>
+    <div class="info">
+    <div class="contact">
+        {dede:field.content/}
+    </div><!--contact end-->
+     
+    </div><!--info end-->
+    <div class="clear"></div>
+  </div><!--nei_right end-->
+  <div class="clear"></div>
+</div><!--main end-->
+{dede:include filename="footer.htm"/}
+</body>
+</html>

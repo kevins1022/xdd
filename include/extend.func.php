@@ -25,7 +25,7 @@ function GetOneImgUrl($img,$ftype=1){
         $dtp = new DedeTagParse();  
         //var_dump($img);
         $dtp->LoadSource($img); 
-        var_dump($img); 
+        //var_dump($img); 
         if(is_array($dtp->CTags)){  
         foreach($dtp->CTags as $ctag){  
             var_dump($ctag->GetName());
@@ -34,11 +34,11 @@ function GetOneImgUrl($img,$ftype=1){
         $height = $ctag->GetAtt('height');  
         $imgurl = trim($ctag->GetInnerText());  
         $img = ''; 
-        var_dump($imgurl); 
+        //var_dump($imgurl); 
         if($imgurl != ''){  
             if(1==1){  
             $img .= $imgurl;  
-            var_dump($img);
+            //var_dump($img);
             } else{
                 $img .= '<img src="'.$imgurl.'" width="'.$width.'" height="'.$height.'" />';  
             } 
